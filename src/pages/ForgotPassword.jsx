@@ -15,8 +15,6 @@ export default function ForgotPassword() {
     e.preventDefault()
     try {
       const auth = getAuth()
-      console.log(auth)
-      console.log(email)
       await sendPasswordResetEmail(auth, email)
       toast.success("Email sent!")
     } catch (error) {
